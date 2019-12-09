@@ -72,3 +72,27 @@ function isBetween(first, last, word) {
 		return false;
 	}
 }
+
+// Getting the version major, minor and patch using str methods challenge
+function retrieveMajor(semver) {
+	semver.split('.');
+	return semver.charAt(0);
+}
+
+function retrieveMinor(semver) {
+	semver.split('.');
+	if (semver.charAt(3) != '.') {
+		return semver.slice(2, 4);
+	} else {
+		return semver.charAt(2);
+	}
+}
+
+function retrievePatch(semver) {
+	semver.split('.');
+	if (semver.charAt(4) === '.') {
+		return semver.slice(5, 7);
+	} else if (semver.charAt(4) != '.') {
+		return semver.charAt(4);
+	}
+}
