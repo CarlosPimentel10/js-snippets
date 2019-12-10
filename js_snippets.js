@@ -96,3 +96,53 @@ function retrievePatch(semver) {
 		return semver.charAt(4);
 	}
 }
+// Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+function Go(num) {
+	a = '-';
+	return a.repeat(num);
+}
+// Write a function that returns true if two rooks can attack each other, and false otherwise.
+function canCapture([yourRook, opponentsRook]) {
+	if (yourRook.charAt(0) == opponentsRook.charAt(0)) {
+		return true;
+	} else if (yourRook.charAt(1) == opponentsRook.charAt(1)) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/*Write two functions:
+
+firstArg() should return the first parameter passed in.
+lastArg() should return the last parameter passed in.
+Return undefined if the function takes no parameters.*/
+function firstArg() {
+	return arguments[0];
+}
+
+function lastArg() {
+	if (arguments.length <= 1) {
+		return arguments[0];
+	}
+	for (i = 0; i <= arguments.length; ++i) {
+		return arguments[(i -= i - 2)];
+		if (arguments.length == '') {
+			return 'undefined';
+		}
+	}
+}
+// Create a function to multiply all values in an array by the amount of values in that array.
+function MultiplyByLength(arr) {
+	for (i = 0; i <= arr.length; ++i) {
+		return arr.map(i => i * arr.length);
+	}
+}
+
+// Create a function that takes an array of numbers and return the first and last elements as a new array.
+function firstLast(arr) {
+	newArr = [];
+	newArr.push(arr.shift());
+	newArr.push(arr.pop());
+	return newArr;
+}
