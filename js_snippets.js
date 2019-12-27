@@ -146,3 +146,42 @@ function firstLast(arr) {
 	newArr.push(arr.pop());
 	return newArr;
 }
+
+// Create a function that returns the smaller number.
+function smallerNum(n1, n2) {
+	if (n1.length <= n2.length) {
+		return n1;
+	} else {
+		return n2;
+	}
+}
+
+// Create a function that takes an array of numbers. Return the largest number in the array.
+function findLargestNum(arr) {
+	return Math.max(...arr);
+}
+// Create a function that takes in an array and returns true if all its values are even, and false otherwise.
+// Fix this incorrect code!
+function checkAllEven(arr) {
+	return arr.every(x => x % 2 == 0);
+}
+/* This is a reverse coding challenge. Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
+Your task is to create a function that, when fed the inputs below, produce the sample outputs shown. */
+function mysteryFunc(arr, num) {
+	const map1 = arr.map(x => x % num);
+	return map1;
+}
+/* Create a function that takes two numbers 
+as arguments (num, length) and returns an array of multiples of num up to length.
+*/
+function arrayOfMultiples(num, length) {
+	var mults = [];
+	for (var i = 1; i <= length; i++) {
+		mults.push(i * num);
+	}
+	return mults;
+}
+// Write a function that converts an object into an array of keys and values.
+function objectToArray(obj) {
+	return Object.entries(obj);
+}
